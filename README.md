@@ -19,8 +19,7 @@ Download the processed textbook chapters from HuggingFace at [princeton-nlp/Text
 
 
 Coming soon:
-- Tokenization script
-- Full collection of textbook chapters
+- Tokenization scripts
 - MathMix
 
 
