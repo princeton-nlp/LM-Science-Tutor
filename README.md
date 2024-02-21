@@ -26,7 +26,7 @@ MathMix is a fine-tuning dataset composed of the STEM split of TutorChat and a p
 
 `./tokenization/tokenize_metamath.py` tokenizes MetaMath by randomly concatenating question/answer pairs to form longer samples. Use the flag `--num_concat` to set the number of samples to concatenate. MathMix concatenates 10 samples at a time. 
 
-`./mathmix_combine.py` concatenates and shuffles the tokenized TutorChat and MetaMath datasets created by the TutorChat and MetaMath tokenization scripts. Use the flags `--tutorchat` and `--metamath` to set the paths to your tokenized datasets.
+`./mathmix_combine.py` concatenates and shuffles the tokenized TutorChat and MetaMath datasets to create MathMix. Use the flags `--tutorchat` and `--metamath` to set the paths to your tokenized datasets created with `./tokenization/tokenize_tutorchat.py` and `./tokenization/tokenize_metamath.py`.
 
 ## Models
 Download our models from HuggingFace at [princeton-nlp/Llemma-7B-32K-MathMix](https://huggingface.co/princeton-nlp/Llemma-7B-32K-MathMix) and [princeton-nlp/Llemma-34B-MathMix](https://huggingface.co/princeton-nlp/Llemma-34B-MathMix).
