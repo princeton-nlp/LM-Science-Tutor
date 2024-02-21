@@ -15,6 +15,9 @@ Coming soon:
 ### TutorChat
 Download the TutorChat data from HuggingFace at [princeton-nlp/TutorChat](https://huggingface.co/datasets/princeton-nlp/TutorChat).
 
+Download the processed textbook chapters from HuggingFace at [princeton-nlp/TextbookChapter](https://huggingface.co/datasets/princeton-nlp/TextbookChapters). This dataset was obtained by scraping [libretexts.org](https://libretexts.org) and processing the cleaned HTML with the HTML-to-LaTeX parser from [Openwebmath](https://github.com/keirp/OpenWebMath). 
+
+
 Coming soon:
 - Tokenization script
 - Full collection of textbook chapters
