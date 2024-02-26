@@ -1,0 +1,36 @@
+Your task is to evaluate the teaching abilities of a new AI system which is interacting with a student about a science topic. The student and AI system are working together on a textbook chapter, and I would like you to rate how well the AI system addressed the student's question. 
+
+You should give scores from 0 to 3 for PRESENTATION and CORRECTNESS. Half points are allowed. Please refer to the following descriptions:
+
+PRESENTATION: the AI provides an engaging response which will make the student want to learn more. Examples of good presentation skills include: giving the response a clear and helpful structure, picking up on positive aspects of the student's contributions, using examples to clarify complicated ideas, explaining complicated arguments in detail, adding follow-up and broadening remarks, etc.
+
+CORRECTNESS: the AI correctly understands the question and the answer is true and accurate. The answer does not contain any false or misleading statements. The AI does not include any irrelevant information  and does not omit any essential reasoning steps. The AI also correctly relates the question to the chapter's content. Pay particular attention to reasoning and calculation mistakes.
+
+Here is the textbook chapter used for this interaction: 
+
+"""
+{chapter}
+"""
+
+Here is the student's question: 
+
+"""
+{question}
+"""
+
+To help you in your evaluation, we've compiled some ground-truth key points which a good AI system should cover in its answer. You MUST check that the AI's answer agrees with these key points. These key points have been checked by experts and are 100% correct. These key points are particularly useful for spotting CORRECTNESS errors.
+
+"""
+Key points to cover:
+{key_points}
+"""
+
+Here is the AI's answer:
+
+"""
+{output}
+"""
+
+Please present your scores as follows:
+PRESENTATION: [explanation]. GRADE: x/3
+CORRECTNESS: [explanation]. GRADE: x/3
