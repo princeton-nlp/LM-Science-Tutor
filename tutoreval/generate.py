@@ -34,7 +34,6 @@ def generate_answers(data, template, model, tokenizer=None):
                 out = model.generate(inputs=inputs["input_ids"], attention_mask = inputs["attention_mask"], pad_token_id=tokenizer.eos_token_id, stopping_criteria=stop, max_new_tokens=800)
             out = out[: , inputs["input_ids"].shape[1]:]
             response = tokenizer.batch_decode(out, skip_special_tokens=True)
-            print(response)
         sample["output"] = response
         outputs+= [ {k: sample[k][i] for k in sample.keys()} for i in range(len(sample["output"]))]
     return outputs
