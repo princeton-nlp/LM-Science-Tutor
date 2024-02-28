@@ -21,9 +21,9 @@ TutorEval questions are very diverse and rely on the textbook chapter in differe
 
 To evaluate your own model on TutorEval, please use the scripts provided in `./tutoreval`.
 
-- `./tutoreval/generate.py` produces the LM tutor outputs and saves them under `./tutoreval/generations/openbook`, or `./tutoreval/generations/closedbook` for TutorEval-ClosedBook. The script `./tutoreval/generate.sh` provides some useful utilities for running your model.
-- `./tutoreval/grade.py` uses GPT-4 as an evaluator to grade the LM tutor's outputs. The script `./tutoreval/grade.sh` also provides some utilities for grading.
-- `./tutoreval/get_results.py` collects GPT-4's grades to give a breakdown of the final TutorEval performance. Grades are saved in `./tutoreval/results`.
+- `./tutoreval/generate.py` produces the LM tutor outputs. 
+- `./tutoreval/grade.py` uses GPT-4 as an evaluator to grade the LM tutor's outputs. 
+- `./tutoreval/get_results.py` collects GPT-4's grades to give a breakdown of the final TutorEval performance.
 
 See `./tutoreval/README.md` for detailed instructions.
 
