@@ -35,6 +35,10 @@ def generate_answers(data, template, model, tokenizer=None):
             out = out[: , inputs["input_ids"].shape[1]:]
             response = tokenizer.batch_decode(out, skip_special_tokens=True)
         sample["output"] = response
+        sample["model"] =[args.model]*len(questions)
+        sample["closedbook_eval"] = [args.closedbook]*len(questions)
+        sample["hf_chat_template"] = [args.hf_chat_template]*len(questions)
+        sample["bnb4bit"] = [args.bnb4bit]*len(questions)
         outputs+= [ {k: sample[k][i] for k in sample.keys()} for i in range(len(sample["output"]))]
     return outputs
 
@@ -76,6 +80,7 @@ if __name__ == "__main__":
     if args.ddp_worldsize > 1:
         assert args.ddp_rank in range(args.ddp_worldsize)
         data = data.select(list(range(args.ddp_rank, len(data), args.ddp_worldsize)))
+    data = torch.utils.data.DataLoader(data, batch_size = args.batch_size, shuffle=False)
 
 
     if "openai/gpt" in args.model:                                              # openai api
@@ -125,7 +130,6 @@ if __name__ == "__main__":
                 )            
 
         model.eval()
-    data = torch.utils.data.DataLoader(data, batch_size = args.batch_size, shuffle=False)
     
     outputs = generate_answers(data, template, model, tokenizer)
 

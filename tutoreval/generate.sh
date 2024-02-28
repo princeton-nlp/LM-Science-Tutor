@@ -3,12 +3,12 @@
 export OPENAI_API_KEY=""                                    #your api keys go here
 
 model=${MOD:-"princeton-nlp/Llemma-7B-32K-MathMix"}         #model to evaluate
-hf_chat_template=${CHATTEMPLATE:-false}
+hf_chat_template=${CHATTEMPLATE:-true}
 output_dir=${OUT:-"tutoreval/generations"}                  #directory to save outputs
 batch_size=${BATCH:-1}                                      #batch size during generation
-ddp_worldsize=${DDP:-1}                                     git#data parallel 
+ddp_worldsize=${DDP:-1}                                     #data parallel 
 closedbook=${CLOSEDBOOK:-false}                             #TutorEval-ClosedBook evaluation
-bnb4bit=${QUANT:-true}                                      #4bit quantization
+bnb4bit=${QUANT:-false}                                     #4bit quantization
 
 
 

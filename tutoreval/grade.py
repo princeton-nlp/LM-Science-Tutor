@@ -35,19 +35,22 @@ if __name__ == '__main__':
 
 
     if args.closedbook:
+        with open("tutoreval/templates/closedbook_grading_template.txt") as f:
+            args.template = f.read()
         if args.ddp_worldsize > 1:
             generations_file = f"{args.dir}/closedbook/{args.model}_{args.ddp_rank}_of_{args.ddp_worldsize}.json"
         else:
             generations_file = f"{args.dir}/closedbook/{args.model}.json"
     else:
+        with open("tutoreval/templates/grading_template.txt") as f:
+            args.template = f.read()
         if args.ddp_worldsize > 1:
             generations_file = f"{args.dir}/openbook/{args.model}_{args.ddp_rank}_of_{args.ddp_worldsize}.json"
         else:
             generations_file = f"{args.dir}/openbook/{args.model}.json"
     with open(generations_file) as f:
         generations = json.load(f)
-    with open("tutoreval/templates/grading_template.txt") as f:
-        args.template = f.read()
+
     grader_model = OpenAI(model=args.grader)
     print(grader_model.complete(["Hello! Introduce yourself please!"]))
 
