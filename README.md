@@ -1,4 +1,4 @@
-# Language Models as Science Tutors
+# *Language Models as Science Tutors*
 
 This is the official repository for [*Language Models as Science Tutors*](https://arxiv.org/abs/2402.11111). 
 
