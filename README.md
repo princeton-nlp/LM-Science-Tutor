@@ -35,10 +35,17 @@ See `./tutoreval/README.md` for detailed instructions.
 
 
 ## TutorChat
-Download the TutorChat data from HuggingFace at [princeton-nlp/TutorChat](https://huggingface.co/datasets/princeton-nlp/TutorChat).
+TutorChat is the first dialogue-tuning dataset for science. TutorChat consists of 80,000 synthetic teacher-student dialogues created using GPT-3.5 and GPT-4. Each conversation is grounded in a textbook chapter downloaded from [libretexts.org](https://libretexts.org) and can take various formats:
+- open-book teacher-student dialogues, where the student asks questions about a textbook chapter and the teacher gives helpful answers. These discussions are led by the student.
+- closed-book dialogues, where the teacher conducts a class based on the textbook chapter.
+- textbook exams, which are question/answer pairs based on the textbook chapter.
+
+We provide TutorChat dialogues for all chapters contained in the TextbookChapters dataset below, which includes humanities and social sciences. Roughly 40% of TutorChat dialogues are for STEM subjects.
+
+Download the TutorChat data from HuggingFace at [princeton-nlp/TutorChat](https://huggingface.co/datasets/princeton-nlp/TutorChat). 
 
 ### 📚 Textbook chapters 
-Download the processed textbook chapters from HuggingFace at [princeton-nlp/TextbookChapter](https://huggingface.co/datasets/princeton-nlp/TextbookChapters). This dataset was obtained by scraping [libretexts.org](https://libretexts.org) and processing the cleaned HTML files with the HTML-to-LaTeX parser from [Openwebmath](https://github.com/keirp/OpenWebMath). 
+Download the processed textbook chapters from HuggingFace at [princeton-nlp/TextbookChapters](https://huggingface.co/datasets/princeton-nlp/TextbookChapters). This dataset was obtained by scraping [libretexts.org](https://libretexts.org) and processing the cleaned HTML files with the HTML-to-LaTeX parser from [Openwebmath](https://github.com/keirp/OpenWebMath). 
 
 ### ⚙️ TutorChat processing
 `./tokenization/tokenize_tutorchat.py` tokenizes TutorChat and creates training labels according to the recipe used to train `Llemma-7B-32K-MathMix`. Use the flag `--stem_only` to tokenize only the STEM split of TutorChat.
