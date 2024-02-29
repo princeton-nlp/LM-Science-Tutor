@@ -37,13 +37,13 @@ See `./tutoreval/README.md` for detailed instructions.
 ## TutorChat
 Download the TutorChat data from HuggingFace at [princeton-nlp/TutorChat](https://huggingface.co/datasets/princeton-nlp/TutorChat).
 
-### Textbook chapters 
+### 📚 Textbook chapters 
 Download the processed textbook chapters from HuggingFace at [princeton-nlp/TextbookChapter](https://huggingface.co/datasets/princeton-nlp/TextbookChapters). This dataset was obtained by scraping [libretexts.org](https://libretexts.org) and processing the cleaned HTML files with the HTML-to-LaTeX parser from [Openwebmath](https://github.com/keirp/OpenWebMath). 
 
-### TutorChat processing
+### ⚙️ TutorChat processing
 `./tokenization/tokenize_tutorchat.py` tokenizes TutorChat and creates training labels according to the recipe used to train `Llemma-7B-32K-MathMix`. Use the flag `--stem_only` to tokenize only the STEM split of TutorChat.
 
-### MathMix
+### 🔢 MathMix
 MathMix is a fine-tuning dataset composed of the STEM split of TutorChat and a processed version of [MetaMath](https://huggingface.co/datasets/meta-math/MetaMathQA). In `./tokenization`, we provide some scripts to re-create and tokenize MathMix.
 
 `./tokenization/tokenize_metamath.py` tokenizes MetaMath by randomly concatenating question/answer pairs to form longer samples. Use the flag `--num_concat` to set the number of samples to concatenate. MathMix concatenates 10 samples at a time. 
