@@ -40,7 +40,7 @@ TutorChat is the first dialogue-tuning dataset for science. TutorChat consists o
 - closed-book dialogues, where the teacher conducts a class based on the textbook chapter.
 - textbook exams, which are question/answer pairs based on the textbook chapter.
 
-We provide TutorChat dialogues for all chapters contained in the TextbookChapters dataset below, which includes humanities and social sciences. Roughly 40% of TutorChat dialogues are for STEM subjects.
+We provide TutorChat dialogues for all chapters contained in the TextbookChapters dataset below, which includes humanities and social sciences. 40% of TutorChat dialogues concern STEM subjects.
 
 Download the TutorChat data from HuggingFace at [princeton-nlp/TutorChat](https://huggingface.co/datasets/princeton-nlp/TutorChat). 
 
