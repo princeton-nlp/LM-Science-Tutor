@@ -24,7 +24,7 @@ python -m tutoreval.generate --model princeton-nlp/Llemma-7B-32K-MathMix --close
 ```
 
 #### Chat templates
-By default, TutorEval formats the LM tutor's prompt as a `user/assistant` dialogue. Some HuggingFace models recommend using other chat templates. To use the HuggingFace chat templates, use the `--hf_chat_template` flag. For example, to evaluate Mistral-7B-Instruct-v0.2:
+By default, TutorEval formats the LM tutor's prompt as a `user/assistant` dialogue. Some HuggingFace models recommend using other chat templates. To use default tokenizer chat templates, use the `--hf_chat_template` flag. For example, to evaluate Mistral-7B-Instruct-v0.2:
 ```python
 python -m tutoreval.generate --model mistralai/Mistral-7B-Instruct-v0.2 --hf_chat_template
 ```
