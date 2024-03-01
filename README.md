@@ -9,7 +9,7 @@ This is the official repository for [*Language Models as Science Tutors*](https:
 
 <br>
 <p align="center">
-<img src="assets/main_radar_fig.png" width="400">
+<img src="assets/main_radar_fig.png" width="800">
 </p>
 <br>
 
