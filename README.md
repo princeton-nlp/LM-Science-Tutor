@@ -17,6 +17,20 @@ TutorEval questions are very diverse and rely on the textbook chapter in differe
 - 📖 TutorEval with open-book evaluation: this is our main setting and uses all 834 TutorEval questions. The LM tutor is prompted with the entire textbook chapter and the question. This requires LMs to process contexts up to 6,000 words.
 - 📕 TutorEval-ClosedBook: this evaluation uses the 370 closed-book questions in TutorEval and prompts the LM tutor without the chapter. This makes it possible to evaluate short-context LMs.
 
+### 🏆 Leaderboard
+We rank the models based on the full TutorEval score, even though TutorEval-ClosedBook rankings sometimes differ.
+|Model|TutorEval| ClosedBook|
+|-|-|-|
+| GPT-4 | 85.2 | 86.1 | 
+| GPT-3.5-Turbo | 68.3 | 69.6 | 
+| Mixtral-8x7B | 66.3 | 68.2 | 
+| Llemma-34B-MathMix | 56.8 | 55.3 | 
+| Mistral-7B-Instruct-V0.2 | 55.5 | 58.7 | 
+| Llemma-7B-32K-MathMix | 50.0 | 45.6 | 
+| Zephyr-7B-Beta | 45.7 | 49.4 | 
+| Vicuna-13B-V1.5-16K | 32.9 | 36.8 | 
+| Mistral-7B-Instruct-V0.1 | 30.5  | 35.5 | 
+| Gemma-7B-IT | 24.0 | 39.5 | 
 ### 🧑‍💻 Evaluating on TutorEval
 
 To evaluate your own model on TutorEval, please use the scripts provided in `./tutoreval`.
@@ -29,7 +43,6 @@ See `./tutoreval/README.md` for detailed instructions.
 
 
 ### Coming soon:
-- TutorEval leaderboard
 -  Human and GPT-4 gradings of the models evaluated in the paper
 
 
