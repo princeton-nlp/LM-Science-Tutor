@@ -5,6 +5,14 @@ This is the official repository for [*Language Models as Science Tutors*](https:
 
 ## TutorEval
 
+
+
+<br>
+<p align="center">
+<img src="assets/main_radar_fig.png" width="400">
+</p>
+<br>
+
 ### 🎓 About
 TutorEval is a question-answering benchmark which evaluates how well a language model (the *LM tutor*) can help a user understand a chapter from a science textbook. TutorEval contains over 800 questions written by 17 expert researchers covering math, computer science, physics, life sciences, and environmental science. TutorEval questions relate to chapters from [TutorChat](https://huggingface.co/datasets/princeton-nlp/TutorChat) (downloaded from [libretexts.org](https://libretexts.org)) and require the model to answer free-form questions written from the point of view of a student. TutorEval questions are very diverse: they may ask for explanations of complicated content, for additional information going beyond the chapter, for verifications of exercise solutions, etc. Download the TutorEval data from HuggingFace at [princeton-nlp/TutorEval](https://huggingface.co/datasets/princeton-nlp/TutorEval).
 
