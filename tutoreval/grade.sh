@@ -48,3 +48,18 @@ else
     echo "${header} "${merge_args[@]}""
     ${header} "${merge_args[@]}"  
 fi
+
+
+header="python -m tutoreval.get_results"
+args=(
+    --dir ${dir}
+    --results_dir tutoreval/results
+    --model ${model}
+    $@
+)
+
+if [ $closedbook == true ]; then
+    args+=(--closedbook)
+fi
+
+${header} "${merge_args[@]}"  
