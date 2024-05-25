@@ -6,7 +6,7 @@ export OPENAI_API_KEY=""                                   # your api key goes h
 model=${MOD:-"princeton-nlp/Llemma-7B-32K-MathMix"}
 closedbook=${CLOSEDBOOK:-false}
 grader=${GRADER:-"gpt-4-1106-preview"}
-dir=${DIR:-"generations"}
+dir=${DIR:-"tutoreval/generations"}
 ddp_worldsize=${DDP:-1}                                    #data parallel uses the splits created during generation. Split the generations files if you want to grade faster.
 
 
@@ -52,14 +52,14 @@ fi
 
 header="python -m tutoreval.get_results"
 args=(
-    --dir ${dir}
+    --output_dir ${dir}
     --results_dir tutoreval/results
     --model ${model}
     $@
 )
 
-if [ $closedbook == true ]; then
+if [ ${closedbook} == true ]; then
     args+=(--closedbook)
 fi
 
-${header} "${merge_args[@]}"  
+${header} "${args[@]}"  
