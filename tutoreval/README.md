@@ -1,4 +1,4 @@
-## 🧑‍💻 Evaluating with TutorEval [work in progress]
+## 🧑‍💻 Evaluating with TutorEval
 
 ### Requirements
 
