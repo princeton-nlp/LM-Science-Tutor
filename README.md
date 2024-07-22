@@ -30,10 +30,15 @@ We rank the models based on the full TutorEval score, even though TutorEval-Clos
 |Model|TutorEval| ClosedBook|
 |-|-|-|
 | GPT-4 | 85.2 | 86.1 | 
+| Llama-3-70B | 71.3 | 78.3 |
 | GPT-3.5-Turbo | 68.3 | 69.6 | 
+| Phi-3-Medium-128K | 67.6 | 69.5 | 
 | Mixtral-8x7B | 66.3 | 68.2 | 
+| Phi-3-Mini-128K | 59.5 | 63.5 | 
 | Llemma-34B-MathMix | 56.8 | 55.3 | 
 | Mistral-7B-Instruct-V0.2 | 55.5 | 58.7 | 
+| Llama-3-8B | 55.3 | 59.1 |
+| Mathstral-7B | 53.9 | 55.6 | 
 | Llemma-7B-32K-MathMix | 50.0 | 45.6 | 
 | Zephyr-7B-Beta | 45.7 | 49.4 | 
 | Vicuna-13B-V1.5-16K | 32.9 | 36.8 | 
