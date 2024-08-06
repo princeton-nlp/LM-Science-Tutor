@@ -54,11 +54,7 @@ To evaluate your own model on TutorEval, please use the scripts provided in `./t
 
 See `./tutoreval/README.md` for detailed instructions.
 
-
-### Coming soon:
--  Human and GPT-4 gradings of the models evaluated in the paper
-
-
+The file`./tutoreval/human_gpt_grades.csv` contains the human grades alongside the GPT-4-1106 grades attributed to four models for each of the TutorEval questions. The human grades can be used to calibrate other LLM judges. Human-LLM correlation can be measured using this dataset as in Appendix C.2, Table 9 in the paper. Note that the TutorEval questions in `human_gpt_grades.csv` may differ slightly from the official set of TutorEval questions as some grammatical typos were corrected after human gradings were completed.
 
 ## TutorChat
 TutorChat is the first dialogue-tuning dataset for science. TutorChat consists of 80,000 synthetic teacher-student dialogues created using GPT-3.5 and GPT-4. Each conversation is grounded in a textbook chapter downloaded from [libretexts.org](https://libretexts.org) and can take various formats:
